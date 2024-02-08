@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_projects/ASSIGNMENTS/EMERGENCY%20APP%20UI/contactlist.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
 
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +66,7 @@ class HomePage extends StatelessWidget {
               isReverse: false,
               isReverseAnimation: false,
               isTimerTextShown: true,
-              autoStart: false,
+              autoStart: true,
               onStart: () {
                 debugPrint('Countdown Started');
               },

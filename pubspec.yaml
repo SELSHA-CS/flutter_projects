@@ -81,6 +81,7 @@ flutter:
     - assets/animations/
     - assets/farmers_images/
     - assets/sharedpref_images/
+    - assets/emergency_images/1.jpg
     - assets/emergency_images/p5.jpg
     - assets/emergency_images/p1.jpg
     - assets/emergency_images/p6.jpg

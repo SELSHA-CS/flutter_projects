@@ -1,32 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/ASSIGNMENTS/EMERGENCY%20APP%20UI/dummydata.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactList extends StatelessWidget {
-
-  var names = [
-    "James Parker",
-    "Christina Belt",
-    "George Graham",
-    "Jennifer Donough",
-    "Carl Geer",
-    "James Powers",
-  ];
-  var nos = [
-    "408-747-7238",
-    "309-337-8350",
-    "309-295-8912",
-    "914-684-6019",
-    "916-232-3746",
-    "610-970-6818",
-  ];
-  var profiles = [
-    "assets/emergency_images/p5.jpg",
-    "assets/emergency_images/p1.jpg",
-    "assets/emergency_images/p6.jpg",
-    "assets/emergency_images/p2.jpg",
-    "assets/emergency_images/p11.jpg",
-    "assets/emergency_images/p7.jpg",
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +24,7 @@ class ContactList extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemCount: names.length,
+        itemCount: contact.length,
         itemBuilder: (context, index) => Card(
           color: Colors.white,
           elevation: 5,
@@ -57,10 +33,13 @@ class ContactList extends StatelessWidget {
             child: ListTile(
               leading: CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage(profiles[index]),
+                backgroundImage: AssetImage(contact[index]['img']),
               ),
-              title: Text(names[index]),
-              subtitle: Text(nos[index]),
+              title: Text(contact[index]['name'], style: GoogleFonts.poppins(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),),
+              subtitle: Text(contact[index]['no']),
               trailing: Icon(Icons.more_vert),
             ),
           ),
