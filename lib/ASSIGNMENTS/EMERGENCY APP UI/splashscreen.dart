@@ -59,7 +59,7 @@ class SplashScreen extends StatelessWidget {
                 ),),
                 Flexible(
                   child: Container(
-                    width: MediaQuery.of(context).size.width - 100, // Adjust the width as needed
+                    width: MediaQuery.of(context).size.width - 100,
                     child: Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
                       textAlign: TextAlign.center,
@@ -68,7 +68,7 @@ class SplashScreen extends StatelessWidget {
                         fontSize: 15,
                       ),
                       maxLines: 2,
-                      overflow: TextOverflow.visible, // Set overflow to visible
+                      overflow: TextOverflow.visible,
                     ),
                   ),
                 ),

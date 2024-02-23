@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/ASSIGNMENTS/EMERGENCY%20APP%20UI/callscreen.dart';
 import 'package:flutter_projects/ASSIGNMENTS/EMERGENCY%20APP%20UI/contactlist.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -72,6 +73,9 @@ class _HomePageState extends State<HomePage> {
               },
               onComplete: () {
                 debugPrint('Countdown Ended');
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => CallScreen())
+                );
               },
               onChange: (String timeStamp) {
                 debugPrint('Countdown Changed $timeStamp');
