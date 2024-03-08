@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -32,7 +31,7 @@ class CarouseEx extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Carousel Slider"),
+        title: const Text("Carousel Slider"),
       ),
       body: CarouselSlider(
         items: List.generate(
@@ -49,7 +48,7 @@ class CarouseEx extends StatelessWidget {
           options: CarouselOptions(
             viewportFraction: .8,
             initialPage: 1,
-            autoPlayInterval: Duration(seconds: 2),
+            autoPlayInterval: const Duration(seconds: 2),
             enableInfiniteScroll: true,
             autoPlay: true,
             pauseAutoPlayOnTouch: true

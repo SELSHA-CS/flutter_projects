@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 
 void main(){
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: FirstProgram(),
     )
   );
 }
 
 class FirstProgram extends StatelessWidget {
-  //const FirstProgra//m({super.key});
+  const FirstProgram({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "My First Program",
           style: TextStyle(
             fontSize: 35,
@@ -28,7 +29,7 @@ class FirstProgram extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image(
+            const Image(
               image: AssetImage("assets/icons/p1.png"),
               height: 250,
               width: 250,
@@ -38,10 +39,10 @@ class FirstProgram extends StatelessWidget {
               height: 150,
               width: 150,
             ),
-            Image(image: NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Circle-icons-art.svg/2048px-Circle-icons-art.svg.png"),
+            const Image(image: NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Circle-icons-art.svg/2048px-Circle-icons-art.svg.png"),
             height: 150,
             width: 150,),
-            Text("MY APPLICATION"),
+            const Text("MY APPLICATION"),
           ],
         ),
       ),
